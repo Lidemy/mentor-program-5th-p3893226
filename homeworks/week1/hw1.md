@@ -28,7 +28,7 @@
 5. 確認作業沒有問題，將作業同步到 Github 上 
 
     ```
-    git push orgin week1
+    git push origin week1
     ```
 
 6. 到 Github 上 Lidemy 上自己的 Repoitories 點選 Compare & pull request
