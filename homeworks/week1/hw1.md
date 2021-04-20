@@ -10,7 +10,7 @@
 3. 切換到 branch week1
 
     ```
-    git checkout branch week1
+    git checkout week1
     ```
 
     或合併2、3
@@ -22,7 +22,7 @@
 4. 將寫完的作業 commit 到新的 branch 
 
     ```
-    commit -am "第一週作業" 
+    git commit -am "第一週作業" 
     ```
 
 5. 確認作業沒有問題，將作業同步到 Github 上 
