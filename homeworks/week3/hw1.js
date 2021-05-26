@@ -15,11 +15,13 @@ rl.on('close', () => {
 })
 
 function solve(n) {
-  for (let i = 1; i <= n; i++) {
-    prinStar(i)
+  const number = Number(n[0])
+  console.log(typeof number)
+  for (let i = 1; i <= number; i++) {
+    prinStars(i)
   }
 }
-function prinStar(num) {
+function prinStars(num) {
   let str = ''
   for (let i = 1; i <= num; i++) {
     str += '*'

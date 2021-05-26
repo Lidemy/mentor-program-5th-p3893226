@@ -15,8 +15,8 @@ rl.on('close', () => {
 })
 
 function solve(n) {
-  const N = n[0]
-  console.log(N === reverse(N) ? 'True' : 'False')
+  const input = n[0]
+  console.log(input === reverse(input) ? 'True' : 'False')
 }
 
 function reverse(str) { // 翻轉字串
