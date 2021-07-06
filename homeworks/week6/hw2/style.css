@@ -15,7 +15,7 @@ span{
   font-size: 20px;
   color: #e74149;
 }
-.form_activity{
+.form__activity{
   font-family: MicrosoftJhengHei;
   font-size: 14px;
   font-weight: normal;
@@ -24,28 +24,28 @@ span{
   line-height: 1.5rem;
   letter-spacing: normal;
 }
-.form_warning{
+.form__warning{
   font-size: 16px;
   color: #e74149;
   margin-top: 22px;
   margin-bottom: 55px;
 }
-.form_nickname{
+.form__nickname{
   font-size: 20px;
   color: black;
   margin-bottom: 52px;
 }
-.form_email{
+.form__email{
   font-size: 20px;
   color: black;
   margin-bottom: 52px;
 }
-.form_phonenumber{
+.form__phonenumber{
   font-size: 20px;
   color: black;
   margin-bottom: 51px;
 }
-.form_types{
+.form__types{
   font-size: 20px;
   color: black;
   margin-bottom: 51px;
@@ -68,7 +68,7 @@ label{
   font-size: 14px;
   margin-bottom: 2rem;
 }
-.form_submit{
+.form__submit{
   font-size: 15px;
   margin-bottom: 21px;
   padding: 13px 30px ;
