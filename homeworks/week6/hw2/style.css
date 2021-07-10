@@ -1,0 +1,102 @@
+form{
+  margin: auto;
+  padding: 54px 100px 35px 42px;
+  max-width: 645px;
+  margin-top: 129px;
+  box-shadow: 1.8px 2.4px 5px 0 #0000004c;
+  border-top: solid 10px #fad312;
+}
+h1{
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+span{
+  font-size: 20px;
+  color: #e74149;
+}
+.form__activity{
+  font-family: MicrosoftJhengHei;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5rem;
+  letter-spacing: normal;
+}
+.form__warning{
+  font-size: 16px;
+  color: #e74149;
+  margin-top: 22px;
+  margin-bottom: 55px;
+}
+.form__nickname{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 52px;
+}
+.form__email{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 52px;
+}
+.form__phonenumber{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 51px;
+}
+.form__types{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 51px;
+}
+label{
+  font-size: 14px;
+  font-family: MicrosoftJhengHei;
+}
+.question{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 48px;
+}
+.other{
+  font-size: 20px;
+  color: black;
+  margin-bottom: 55px;
+}
+.description{
+  font-size: 14px;
+  margin-bottom: 2rem;
+}
+.form__submit{
+  font-size: 15px;
+  margin-bottom: 21px;
+  padding: 13px 30px ;
+  border: none;
+  border-radius: 3px;
+  background: #fad312;
+}
+.warning{
+  font-size: 14px;
+}
+input::placeholder {
+  color: #afafaf;
+  font-size: 16px;
+}
+footer{
+  margin-top: 66px;
+  padding: 26px;
+  text-align: center;
+  background: black;
+  color: gray;
+  font-size: 13px;
+}
+
+@media(max-width: 768px) {
+  .form{
+    text-align: center;
+    max-width: 400px;
+    padding: 15px 20px;
+    margin:auto
+  }
+}
