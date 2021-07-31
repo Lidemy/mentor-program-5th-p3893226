@@ -1,0 +1,142 @@
+html, body{
+  /* width: 100%;
+  height: 100%; */
+  font-family: Maven Pro, Questrial, "微軟正黑體"; 
+  box-sizing: border-box;
+}
+
+/* CSS Reset：取消預設空隙 */
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+/* 去除標題項目黑點 & 底線 */
+ul, li, a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  max-width: 500px;
+  box-shadow: 0px 0px 20px rgb(199, 197, 197);
+  margin: 20px auto;
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  letter-spacing: 1.4px;
+
+}
+
+h1 {
+  font-size: 36px;
+  color: #60c983;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.todo__input-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo__input{
+  border-radius: 10px;
+  padding: 5px 15px;
+  border: 1px solid rgb(167, 166, 166);
+}
+
+
+.btn-add{
+  cursor: pointer;
+  border: 1px solid rgb(214, 214, 214);
+  outline: none;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+/* 用 div 顯示 + */
+.btn-add:after,.btn-add:before{
+  content: '';
+  background: rgb(162, 162, 162);
+  width: 20px;
+  height: 1px;
+  position: absolute;
+}
+
+.btn-add:before{
+  transform: translate(-50%,-50%)
+}
+
+.btn-add:after{
+  transform: translate(-50%,-50%) rotate(90deg);
+}
+
+.btn-add:hover:after, .btn-add:hover:before {
+  background: #60c983;
+}
+
+/* 分隔線 */
+.todo__line{
+  width: 500px;
+  height: 1px;
+  background-color: rgb(235, 235, 235);
+  margin: 10px auto;
+}
+/* 項目刪除線*/
+input[type=checkbox]:checked + span{
+  text-decoration: line-through;
+}
+
+.todo__list li{
+  display: flex;
+  justify-content: space-between;
+  margin: 7px;
+  padding: 5px 10px;
+}
+
+.todo__list li:hover{
+  background-color: rgb(218, 218, 218);
+  border-radius: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.todo__list li > label > span{
+  margin: 0px 10px;
+  font-size: medium;
+  color: rgb(75, 75, 75);
+}
+
+.btn-del{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: transparent;
+  outline: none;
+  border: 0px solid rgb(214, 214, 214);
+  cursor: pointer;
+}
+.btn-del:after,.btn-del:before{
+  content: '';
+  background-color: rgb(162, 162, 162);
+  width: 13px;
+  height: 1px;
+  position: absolute;
+}
+
+.btn-del:after{
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+
+.btn-del:before{
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+
+.btn-del:hover:after,.btn-del:hover:before{
+  background-color: #60c983;
+}

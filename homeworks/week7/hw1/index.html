@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>新拖延運動表單</title>
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <form class="form">
+    <div>
+      <h1 class="form__heading">新拖延運動報名表單</h1>
+      <p class="form__activity">活動日期：2020/12/10 ~ 2020/12/11<br>
+      活動地點：台北市大安區新生南路二段1號</p>
+      <p class="form__warning">*必填</p>
+    </div>
+    <section>
+      <div class="form__nickname required done">暱稱<span> *</span>
+        <P>
+          <input type="text" placeholder="您的回答" name='nickName' size="25">
+        </P>
+        <div class="input__error">欄位為必填</div>
+      </div>
+      <div class="form__email required done">電子郵件<span> *</span>
+        <P>
+          <input type="text" placeholder="您的電子郵件" name='email' size="25">
+        </P>
+        <div class="input__error">欄位為必填</div>
+      </div>
+      <div class="form__phonenumber required done">手機號碼<span> *</span>
+        <p>
+          <input type="text" placeholder="您的手機號碼" name='phoneNumber' size="25">
+        </p>
+        <div class="input__error">此欄位為必填</div>
+      </div>
+    </section>
+    <section>
+      <div class="form__types required done">報名類型<span> *</span>
+        <p>
+          <input type="radio" name="types" id="imagination">
+          <label for="imagination">躺在床上用想像力實作</label>
+        </p>
+        <p>
+          <input type="radio" name="types" id="existing">
+          <label for="existing">趴在地上滑手機找現成的</label>
+        </p>
+        <div class="input__error">請選擇報名類型</div>
+      </div>
+    </section>
+    <section>
+      <div class="question required done">
+        怎麼知道這個活動的？<span> *</span>
+        <p>
+          <input type="text" placeholder="您的回答" name='knowing' size="25">
+        </p>
+        <div class="input__error">此欄位為必填</div>
+      </div>
+      <div class="other">
+        其他<br>
+        <p class="description">對活動的一些建議</p>
+        <p>
+          <input type="text" placeholder="您的回答" name='advice' size="25">
+        </p>
+      </div>
+    </section>
+    <section>
+      <input class="form__submit" type="submit" value="提交">
+    <p class="warning">請勿透過表單送出您的密碼。</p>
+    </section>
+  </form>
+  <footer>
+    © 2020 © Copyright. All rights Reserved.
+  </footer>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
