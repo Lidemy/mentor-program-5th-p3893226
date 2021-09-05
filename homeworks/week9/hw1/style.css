@@ -1,0 +1,219 @@
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: Questrial, "微軟正黑體";
+  margin: 0 auto; 
+  max-width: 1920px;
+  background-color: #f7f7f7;
+}
+
+/* CSS Reset：取消預設空隙 */
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 20;
+}
+/* 去除標題項目黑點 & 底線 */
+ul, li, a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+label:hover {
+  text-decoration:underline;
+  background-color:#dbdbdb;
+  color:gray;
+}
+
+a:hover {
+  text-decoration:underline;
+  background-color:#dbdbdb;
+  color:gray;
+}
+
+.current__page{
+  color: black;
+}
+
+.errorMsg{
+  color: #a20606;
+  margin-bottom: 20px;
+}
+
+.warning{
+  background-color: #ffc4c6;
+  color: #a20606;
+  padding: 10px;
+  text-align: center;
+}
+.board{
+  background: white;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  box-shadow: 1px 1px 3px #e8e8e8;
+  border-radius: 5px;
+}
+
+.board__btn-wrapper{
+  margin-top: 20px;
+}
+
+.board__btn{
+  border: 1px solid #c2dffb;
+  border-radius: 5px;
+  padding: 10px;
+  color: #0b090c;
+  width: 16%;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.board__title{
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.board__new-comment-form textarea{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #c2dffb;
+  box-sizing: border-box;
+}
+.board__nickname{
+  margin-bottom: 10px;
+}
+
+.board__nickname input{
+  border: 1px solid #c2dffb;
+  padding: 5px;
+}
+
+.table{
+  border-collapse: collapse;
+  margin: auto;
+}
+
+.table td {
+  min-width: 100px;
+  text-align: center;
+  border: 0.5px solid #e0e0e0;
+  padding: 5px;
+}
+
+.table td form button{
+  margin-top:5px;
+  margin-bottom: 5px;
+}
+
+.new__nickname{
+  border: 1px solid #c2dffb;
+  padding: 5px;
+}
+
+.drawer__btn {
+  cursor: pointer;
+  border: 1px solid #c2dffb;
+  border-radius: 5px;
+  padding: 10px;
+  color: #0b090c;
+  width: 16%;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+}
+
+.drawer__content-wrapper {
+  margin-top: 20px;
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.drawer__trigger:checked + .drawer__content-wrapper {
+  max-height: 300px;
+  max-width: 700px;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.board__submit-btn{
+  border: 1px solid #c2dffb;
+  border-radius: 5px;
+  padding: 5px;
+  color: #583c63;
+  width: 16%;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+}
+.board__hr{
+  max-width: 100% ;
+  height: 2px;
+  margin: 10px auto;
+  background-color: #e8e8e8;
+}
+.card{
+  margin: 10px 0;
+  min-height: 70px;
+  padding: 10px 0px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  display: flex;
+}
+.card__avatar{
+  height: 50px;
+  width: 50px;
+  min-width: 50px;
+  border-radius: 50%;
+  background-color: #c2dffb;
+}
+
+.card__body{
+  margin-left: 10px;
+}
+
+.card__content{
+  max-width: 100%;
+  margin-top: 8px;
+  word-break: break-all;
+  white-space: pre-line;
+}
+.card__author{
+  color: #5c9edc;
+  font-weight: bold;
+}
+
+.card__type{
+  color: #a0a0a0;
+}
+.page-info {
+  text-align: center;
+}
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.paginator a {
+  text-decoration: none;
+  color: #5c9edc;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.paginator span, .paginator a:active {
+  text-decoration: none;
+  color: white;
+  background-color: #4CAF50;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 4px;
+}
