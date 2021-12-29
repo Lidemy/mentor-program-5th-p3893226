@@ -18,117 +18,117 @@
       let isEnd = 0
       let numberOfComments = 0
 
-			$(document).ready(()=> {
-				getComments()
+      $(document).ready(()=> {
+        getComments()
 
-				$('.comments').on('click', '.more-comments-btn', e => {
-					$('.more-comments-btn').hide()
-					getComments()
-				})
+        $('.comments').on('click', '.more-comments-btn', e => {
+          $('.more-comments-btn').hide()
+          getComments()
+        })
 
         $('.add-comment-form').submit(e => {
-					e.preventDefault()
-					addComment()
+          e.preventDefault()
+          addComment()
         })
-			})
+      })
 
-			function getComments() { 
-				const commentDOM = $('.comments')
+      function getComments() { 
+        const commentDOM = $('.comments')
         getCommentsAPI(lastId, data=> {
-					numberOfComments = data.count
+          numberOfComments = data.count
           const comments = data.discussions
           for (let comment of comments) {
-						appendCommentToDOM(commentDOM, comment)
-					}
-					let length = comments.length
-					isEnd += 5
+            appendCommentToDOM(commentDOM, comment)
+          }
+          let length = comments.length
+          isEnd += 5
 
-					if (isEnd >= numberOfComments) {
-						$('.more-comments-btn').hide()
-					} else {
-						lastId = comments[length-1].id
-						commentDOM.append(`<button class="btn btn-primary mt-2 mb-3 more-comments-btn" type="button">載入更多</button>`)
-					}
+          if (isEnd >= numberOfComments) {
+            $('.more-comments-btn').hide()
+          } else {
+            lastId = comments[length-1].id
+            commentDOM.append(`<button class="btn btn-primary mt-2 mb-3 more-comments-btn" type="button">載入更多</button>`)
+          }
         })
-			}
+      }
 
-			function addComment() {
-				const commentDOM = $('.comments')
-				const newCommentData = {
-					site_key: siteKey,
-					nickname: $('input[name=nickname]').val(),
-					content: $('textarea[name=content]').val()
-				}
-				$.ajax({
-					type: 'POST',
-					url: `${baseURL}/api_add_comments.php`,
-					data: newCommentData
-				}).done(data => {
-					if (!data.ok) {
-						alert(data.message)
-						return
-					}
-					$('input[name=nickname]').val('')
-					$('textarea[name=content]').val('')
-					appendCommentToDOM(commentDOM, newCommentData, true)
-				})
-			}
+      function addComment() {
+        const commentDOM = $('.comments')
+        const newCommentData = {
+          site_key: siteKey,
+          nickname: $('input[name=nickname]').val(),
+          content: $('textarea[name=content]').val()
+        }
+        $.ajax({
+          type: 'POST',
+          url: `${baseURL}/api_add_comments.php`,
+          data: newCommentData
+        }).done(data => {
+          if (!data.ok) {
+            alert(data.message)
+            return
+          }
+          $('input[name=nickname]').val('')
+          $('textarea[name=content]').val('')
+          appendCommentToDOM(commentDOM, newCommentData, true)
+        })
+      }
 
-			function getCommentsAPI(before, callback) {
+      function getCommentsAPI(before, callback) {
         let url = `${baseURL}/api_comments.php?site_key=${siteKey}`
         if (before) {
           url += '&before=' + before
         }
-				$.ajax({
+        $.ajax({
           url:url,
-				}).done(data => {
-					if (!data.ok) {
-						alert(data.message)
-						return
-					}
-					callback(data)
-				})
-			}
+        }).done(data => {
+          if (!data.ok) {
+            alert(data.message)
+            return
+          }
+          callback(data)
+        })
+      }
 
-			function appendCommentToDOM(container, comment, isPrepend) {
-				const html = `
-					<div class="card mt-3">
-						<div class="card-body">
-							<h5 class="card-title">${escapeHTML(comment.nickname)}</h5>
-							<p class="card-text">${escapeHTML(comment.content)}</p>
-						</div>
-					</div>
-				`
+      function appendCommentToDOM(container, comment, isPrepend) {
+        const html = `
+          <div class="card mt-3">
+            <div class="card-body">
+              <h5 class="card-title">${escapeHTML(comment.nickname)}</h5>
+              <p class="card-text">${escapeHTML(comment.content)}</p>
+            </div>
+          </div>
+        `
         isPrepend ? container.prepend(html) : container.append(html)
-			}
+      }
 
-			function escapeHTML(toOutput){
-				if(toOutput) {
-					return toOutput.replace(/\&/g, '&amp;')
+      function escapeHTML(toOutput){
+        if(toOutput) {
+          return toOutput.replace(/\&/g, '&amp;')
             .replace(/\</g, '&lt;')
             .replace(/\>/g, '&gt;')
             .replace(/\"/g, '&quot;')
             .replace(/\'/g, '&#x27')
             .replace(/\//g, '&#x2F');
-				}
-			}
-		</script>
-	</head>
-	<body>
-		<div class="container">
-			<form class="add-comment-form">
-				<div class="pt-3 pb-3">
-					<label for="form-nickname" class="form-label">暱稱</label>
-					<input name="nickname" type="text" class="form-control" id="form-nickname" placeholder="請輸入暱稱">
-				</div>
-				<div class="pb-3">
-					<label for="content-textarea" class="form-label">留言內容</label>
-					<textarea name="content" type="text" class="form-control" id="content-textarea"  placeholder="填寫留言" rows="3"></textarea>
-				</div>
-				<button type="submit" class="btn btn-primary">送出</button>
-			</form>
-			<div class="comments">
-			</div>
-		</div>
-	</body>
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="add-comment-form">
+        <div class="pt-3 pb-3">
+          <label for="form-nickname" class="form-label">暱稱</label>
+          <input name="nickname" type="text" class="form-control" id="form-nickname" placeholder="請輸入暱稱">
+        </div>
+        <div class="pb-3">
+          <label for="content-textarea" class="form-label">留言內容</label>
+          <textarea name="content" type="text" class="form-control" id="content-textarea"  placeholder="填寫留言" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">送出</button>
+      </form>
+      <div class="comments">
+      </div>
+    </div>
+  </body>
 </html>
