@@ -65,8 +65,8 @@ function filterList() {
   }
 }
 
-function contentEditable(node, IsEditable) {
-  IsEditable
+function contentEditable(node, isEditable) {
+  isEditable
     ? node.attr("contenteditable", "true")
     : node.attr("contenteditable", "false");
 }
