@@ -1,0 +1,156 @@
+
+html, body{
+  width: 100%;
+  height: 100%;
+  font-family: Questrial, "微軟正黑體";
+  margin: 0 auto; 
+  max-width: 1920px;
+}
+
+/* CSS Reset：取消預設空隙 */
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+/* 去除標題項目黑點 & 底線 */
+ul, li, a {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+.navbar {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: none;
+  box-shadow: -1.4px -1.4px 1px 0 #97a2a0;
+}
+
+.navbar__site-name {
+  color: #242524;
+  font-size: 36px; 
+}
+
+.navbar__list {
+  display: flex;
+  list-style: none; 
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+/* 增加按鈕的漸變效果 */
+.navbar__list li {
+  margin-left: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.navbar__list li:hover {
+  background: gray;
+  color: white;
+  transition: all 0.2s;
+}
+
+.navbar__list li:hover a {
+  color: white;
+}
+
+.navbar__list li a {
+  color: black;
+  padding: 12px 24px;
+  display: block;
+}
+
+/*  背景設置 */
+.content{
+  width: 1800px;
+  height: auto;
+  text-align: center;
+  background-repeat: repeat-y;
+  background-image: url('https://i0.wp.com/www.51pptmoban.com/d/file/2018/08/20/05aaec3252500ea2984b02c9273ffe80.jpg')
+}
+
+.title{
+  font-size: 36px;
+  font-weight: bold;
+  color: white;
+  display: inline-block;
+  margin-top: 60px;
+  background: transparent;
+}
+
+.popular__des{
+  font-size: 24px;
+  color: white;
+  margin: 30px;
+}
+
+/* 實況顯示外包裝 */
+.wrapper__streams{
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  width: 1200px;
+  background-color: transparent; 
+  padding-top:20px; 
+  padding-bottom:20px; 
+}
+
+/* 實況預覽視窗 */
+.streams{
+  width: 200px;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  background-color:rgb(58, 58, 58);
+  margin-left:12px;
+  margin-top: 15px;
+  transition: all 0.2s;
+}
+
+.streams:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 0.2s;
+  -webkit-filter:brightness(X);
+  filter: brightness(110%);
+}
+
+.streams__des{
+  display: flex;
+  text-align: left;
+  margin-top: 8px;
+  padding: 2px;
+}
+
+.stream__preview {
+  width: 200px;
+  height: 120px;
+}
+
+.streamer__avatar{
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border-radius: 50% ;
+}
+
+.streamer__name{
+  color: white;
+  font-size: small;
+  margin-top: 5px;
+}
+.streamer__title{
+  width: 150px;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
